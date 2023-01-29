@@ -1,24 +1,27 @@
 <?php
 	header('Content-Type: application/json');
-	include('../../../conn.php');
+	include('../conn.php');
     
     date_default_timezone_set("Asia/Bangkok");
     
-    $strSQL = "UPDATE supplier SET ";
-    $strSQL .= "supcode='".$_POST["supcode"]."',supname='".$_POST["supname"]."' ";
-    $strSQL .= ",idno='".$_POST["idno"]."',road='".$_POST["road"]."',subdistrict='".$_POST["subdistrict"]."' ";
-    $strSQL .= ",district='".$_POST["district"]."',province='".$_POST["province"]."',zipcode='".$_POST["zipcode"]."' ";
-    $strSQL .= ",tel='".$_POST["tel"]."',fax='".$_POST["fax"]."',taxnumber='".$_POST["taxnumber"]."' ";
-    $strSQL .= ",email='".$_POST["email"]."',status='".$_POST["status"]."' ";
-    $strSQL .= "WHERE code= '".$_POST["code"]."' ";
+    $strSQL = "UPDATE customer SET ";
+    $strSQL .= "cusname='".$_POST["cusname"]."',lastname='".$_POST["lastname"]."' ";
+    $strSQL .= ",titlename='".$_POST["titlename"]."',cusdate='".$_POST["cusdate"]."',code='".$_POST["code"]."' ";
+    $strSQL .= ",codeno='".$_POST["codeno"]."',plateno='".$_POST["plateno"]."',credittype='".$_POST["credittype"]."' ";
+    $strSQL .= ",oldfinance='".$_POST["oldfinance"]."',closeprice='".$_POST["closeprice"]."',closevender='".$_POST["closevender"]."' ";
+    $strSQL .= ",diff='".$_POST["diff"]."',branch='".$_POST["branch"]."',province='".$_POST["province"]."' ";
+    $strSQL .= ",followdate='".$_POST["followdate"]."',trackno='".$_POST["trackno"]."' ";
+    $strSQL .= ",s_date = '".date("Y-m-d")."',s_time='".date("H:i:s")."' ";
+    $strSQL .= "WHERE cuscode= '".$_POST["cuscode"]."' ";
     
 	$query = mysqli_query($conn,$strSQL);
+
     
     // echo $strSQL;
 
 
         if($query) {
-            echo json_encode(array('status' => '1','message'=> 'แก้ไขผู้ขาย '.$_POST["supname"].' สำเร็จ'));
+            echo json_encode(array('status' => '1','message'=> 'เคสลูกค้า '.$_POST["cusname"].' '.$_POST["lastname"].' สำเร็จ'));
         }
         else
         {

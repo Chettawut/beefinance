@@ -14,21 +14,22 @@
                     <div class="form-row">
                         <div class="col-md-4">
                             <label class="col-form-label">วันที่ </label>
-                            <input type="date" class="form-control" name="EmpBirth" id="EmpBirth" required>
+                            <input type="date" class="form-control" name="add_cusdate" id="add_cusdate" required>
                         </div>
                         <div class="col-md-4">
                             <label class="col-form-label">Code </label>
-                            <input type="text" class="form-control" name="EmpBirth" id="EmpBirth" required>
+                            <input type="text" class="form-control" name="add_code" id="add_code" required>
                         </div>
                         <div class="col-md-4">
                             <label class="col-form-label">เลข Code </label>
-                            <input type="text" class="form-control" name="Age" id="Age" value="">
+                            <input type="text" class="form-control" name="add_codeno" id="add_codeno" value="">
                         </div>
                     </div>
+
                     <div class="form-row">
                         <div class="col-md-3">
                             <label class="col-form-label">คำนำหน้า :</label>
-                            <select class="custom-select" name="ETitleName" id="ETitleName" required>
+                            <select class="custom-select" name="add_titlename" id="add_titlename" required>
                                 <option value=""></option>
                                 <option value="นาย">นาย</option>
                                 <option value="น.ส.">น.ส.</option>
@@ -39,22 +40,22 @@
                         </div>
                         <div class="col-md-4">
                             <label class="col-form-label">ชื่อ :</label>
-                            <input type="text" class="form-control" name="EmpName" id="EmpName" value="" required>
+                            <input type="text" class="form-control" name="add_cusname" id="add_cusname" value="" required>
                         </div>
                         <div class="col-md-4">
                             <label class="col-form-label">นามสกุล :</label>
-                            <input type="text" class="form-control" name="LastName" id="LastName" value="" required>
+                            <input type="text" class="form-control" name="add_lastname" id="add_lastname" value="" required>
                         </div>
                     </div>
                     <hr>
                     <div class="form-row">
                         <div class="col-md-4">
                             <label class="col-form-label">ทะเบียนรถ </label>
-                            <input type="text" class="form-control" name="Age" id="Age" value="">
+                            <input type="text" class="form-control" name="add_plateno" id="add_plateno" value="">
                         </div>
                         <div class="col-md-4">
                             <label for="recipient-name" class="col-form-label">ประเภทสินเชื่อ</label>
-                            <select class="custom-select" name="ETitleName" id="ETitleName" required>
+                            <select class="custom-select" name="add_credittype" id="add_credittype" required>
                                 <option value=""></option>
                                 <option value="จำนำ">จำนำ</option>
                                 <option value="เช่าซื้อ">เช่าซื้อ</option>
@@ -62,21 +63,21 @@
                         </div>
                         <div class="col-md-4">
                             <label for="recipient-name" class="col-form-label">ไฟแนนซ์เดิม</label>
-                            <input type="text" class="form-control" name="district" id="district">
+                            <input type="text" class="form-control" name="add_oldfinance" id="add_oldfinance">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-md-4">
                             <label class="col-form-label">ยอดปิดบัญชี </label>
-                            <input type="text" class="form-control" name="Age" id="Age" value="">
+                            <input type="text" class="form-control" name="add_closeprice" id="add_closeprice" value="">
                         </div>
                         <div class="col-md-4">
                             <label class="col-form-label">ยอดปิดจาก Vender </label>
-                            <input type="text" class="form-control" name="Age" id="Age" value="">
+                            <input type="text" class="form-control" name="add_closevender" id="add_closevender" value="">
                         </div>
                         <div class="col-md-4">
                             <label class="col-form-label">ส่วนต่าง </label>
-                            <input type="text" class="form-control" name="Age" id="Age" value="">
+                            <input type="text" class="form-control" name="add_diff" id="add_diff" value="">
                         </div>
                     </div>
 
@@ -84,11 +85,11 @@
 
                         <div class="col-md-4">
                             <label for="recipient-name" class="col-form-label">ชื่อสาขา</label>
-                            <input type="text" class="form-control" name="road" id="road">
+                            <input type="text" class="form-control" name="add_branch" id="add_branch">
                         </div>
                         <div class="col-md-4">
                             <label for="recipient-name" class="col-form-label">จังหวัด</label>
-                            <select class="form-control" name="province" id="province">
+                            <select class="form-control" name="add_province" id="add_province">
                                 <?php getProvince();?>
                             </select>
                         </div>
@@ -99,7 +100,7 @@
             <div class="modal-footer">
                 <div class="col text-center">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
-                    <button type="submit" id="frmAddCustomer" form="frmAddCustomer"
+                    <button type="submit" form="frmAddCustomer"
                         class="btn btn-primary">เพิ่ม</button>
                 </div>
             </div>

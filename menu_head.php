@@ -2,10 +2,10 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" data-widget="pushmenu" href="<?php echo PATH; ?>" role="button">
             <i class="fas fa-bars"></i></a>
-        </li>
+        </li> -->
     </ul>
 
     <!-- Right navbar links -->

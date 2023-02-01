@@ -4,7 +4,7 @@
     <a href="<?php echo PATH; ?>" class="brand-link">
         <img src="<?php echo PATH; ?>/img/logo_fb.png" class="brand-image img-circle elevation-3"
             style="background-color:white;">
-        <span class="brand-text font-weight-light">Bee Finance</span>
+        <span class="brand-text font-weight-light">Sabai Cash</span>
     </a>
 
     <!-- Sidebar -->

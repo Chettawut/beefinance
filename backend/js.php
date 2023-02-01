@@ -24,8 +24,8 @@ $(function() {
                         count] + '" data-whatever="' + result.cuscode[
                         count] + '"><td>' + convertDateTH(result.cusdate[count]) + '</td><td>' + result
                     .titlename[count] + ' ' + result.cusname[count] + ' ' + result.lastname[
-                        count] + '</td><td>' + result.code[count] + '</td><td>' + result.codeno[
-                        count] + '</td><td  style="text-align:center">' + status + '</td></tr>');
+                        count] + '</td><td  style="text-align:center">' + status + '</td><td>' + result.code[count] + '</td><td>' + result.codeno[
+                        count] + '</td></tr>');
             }
 
             var table = $('#tableCustomer').DataTable({
@@ -33,7 +33,7 @@ $(function() {
                 "lengthChange": false,
                 "searching": true,
                 "ordering": true,
-                order: [[ 4, 'asc' ]],
+                order: [[ 3, 'asc' ]],
                 "info": false,
                 "autoWidth": false,
                 "responsive": true,

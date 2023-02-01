@@ -186,6 +186,7 @@
         </div>
     </div>
 
+<<<<<<< HEAD
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -205,6 +206,53 @@
                         <input type="password" name="password" placeholder="Password" id="password" required>
                         <input type="submit" value="Login">
                     </form>
+=======
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-12">
+                            <form data-ajax="false" target="_blank" method="post">
+                                <div data-role="fieldcontain">
+                                    <div class="btn-group" id="btnAddSO" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#modal_add"><i class="fa fa fa-tags" aria-hidden="true"></i>
+                                            เพิ่มลูกค้า</button>
+                                        <button type="button" id="btnRefresh" class="btn btn-primary"><i
+                                                class="fas fa-sync-alt" aria-hidden="true"></i> Refresh</button>
+                                    </div>
+                                    <div class="btn-group" id="btnBack" style="display:none;" role="group"
+                                        aria-label="Basic example">
+                                        <button type="button" class="btn btn-success"><i class="fa fa fa-tags"
+                                                aria-hidden="true"></i>
+                                            ย้อนกลับ</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-12 col-12">
+                            <table name="tableCustomer" id="tableCustomer" class="table table-bordered table-striped">
+                                <thead style=" background-color:#D6EAF8;">
+                                    <tr>
+                                        <th width="10%">วันที่</th>
+                                        <th width="40%">ชื่อลูกค้า</th>
+                                        <th width="20%" style="text-align:center">สถานะ</th>
+                                        <th width="15%">Code</th>
+                                        <th width="15%">เลข Code</th>
+                                        
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+>>>>>>> 9b31f6ad7a665ca27175e1beba51323ebda26406
                 </div>
             </div>
         </div>

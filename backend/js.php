@@ -33,7 +33,7 @@ $(function() {
                 "lengthChange": false,
                 "searching": true,
                 "ordering": true,
-                order: [[ 3, 'asc' ]],
+                order: [[ 2, 'asc' ]],
                 "info": false,
                 "autoWidth": false,
                 "responsive": true,

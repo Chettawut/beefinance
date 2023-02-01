@@ -77,9 +77,10 @@ include_once('conn.php');
                                     <tr>
                                         <th width="10%">วันที่</th>
                                         <th width="40%">ชื่อลูกค้า</th>
+                                        <th width="20%" style="text-align:center">สถานะ</th>
                                         <th width="15%">Code</th>
                                         <th width="15%">เลข Code</th>
-                                        <th width="20%" style="text-align:center">สถานะการใช้งาน</th>
+                                        
 
                                     </tr>
                                 </thead>

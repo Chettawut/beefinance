@@ -20,8 +20,8 @@ include_once('config.php');
                         <a class="nav-link" href="<?php echo PATH; ?>">ติดต่อเรา</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="<?php echo PATH; ?>/backend">Login</a>
-                        <!-- <a class="nav-link" data-toggle="modal" data-target="#exampleModalCenter">Login</a> -->
+                    <!-- <a class="nav-link" href="<?php echo PATH; ?>/backend">Login</a> -->
+                        <a class="nav-link" data-toggle="modal" data-target="#exampleModalCenter">Login</a>
                     </li>
                     <!-- <li class="nav-item">
             <a class="nav-link" href="post.html">Sample Post</a>

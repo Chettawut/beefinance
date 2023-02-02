@@ -79,7 +79,7 @@
         width: 100%;
         padding: 15px;
         margin-top: 20px;
-        /* background-color: #e6001a; */
+        background-color: #e6001a;
         border: 0;
         cursor: pointer;
         font-weight: bold;

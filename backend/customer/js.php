@@ -43,8 +43,8 @@ $(function() {
             });
 
             $(".dataTables_filter input[type='search']").attr({
-                size: 30,
-                maxlength: 30
+                size: 40,
+                maxlength: 40
             });
 
 

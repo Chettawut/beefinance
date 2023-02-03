@@ -12,7 +12,6 @@
 		"lastname" => array(),
 		"tel" => array(),
 		"email" => array(),
-		"salecode" => array(),
 		"status" => array(),
 		"type" => array()
 		
@@ -24,7 +23,6 @@
 			array_push($json_result['lastname'],$row["lastname"]);
 			array_push($json_result['tel'],$row["tel"]);
 			array_push($json_result['email'],$row["email"]);
-			array_push($json_result['salecode'],$row["salecode"]);
 			array_push($json_result['status'],$row["status"]);
 			array_push($json_result['type'],$row["type"]);
         }

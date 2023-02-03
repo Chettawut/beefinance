@@ -26,8 +26,9 @@ $(function() {
                     '<tr data-toggle="modal" data-target="#modelUserEdit" id="' + result
                     .username[
                         count] + '" data-whatever="' + result.username[
-                        count] + '">.<td>' + result.username[count] + '</td><td>' +
-                    result.firstname[count] + '</td><td>' + type + '</td></tr>');
+                        count] + '"><td>' + result.username[count] + '</td><td>' +
+                    result.firstname[count] + '</td><td>' +
+                    result.lastname[count] + '</td><td>' + type + '</td></tr>');
             }
 
             var table = $('#tableUser').DataTable({
@@ -35,8 +36,8 @@ $(function() {
             });
 
             $(".dataTables_filter input[type='search']").attr({
-                size: 60,
-                maxlength: 60
+                size: 40,
+                maxlength: 40
             });
 
         }
@@ -58,7 +59,6 @@ $('#modelUserEdit').on('show.bs.modal', function(event) {
             modal.find('.modal-body #editpassword').val(result.password);            
             modal.find('.modal-body #editfirstname').val(result.firstname);
             modal.find('.modal-body #editlastname').val(result.lastname);
-            modal.find('.modal-body #editsalecode').val(result.salecode);
             modal.find('.modal-body #editstatus').val(result.status);
             modal.find('.modal-body #edittype').val(result.type);
             modal.find('.modal-body #editemail').val(result.email);

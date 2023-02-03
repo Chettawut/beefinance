@@ -79,7 +79,8 @@
                                 <thead style=" background-color:#D6EAF8;">
                                     <tr>
                                         <th width="25%">Username</th>
-                                        <th width="50%">ชื่อ</th>
+                                        <th width="25%">ชื่อ</th>
+                                        <th width="25%">นามสกุล</th>
                                         <th width="25%" style="text-align:center">ประเภท</th>
 
 

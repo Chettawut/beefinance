@@ -3,10 +3,10 @@
     include('../../conn.php');
     date_default_timezone_set('Asia/Bangkok');
     $password = password_hash($_POST['userpassword'], PASSWORD_DEFAULT);
-    $StrSQL = "INSERT INTO user (`username`, `password`, `firstname`, `lastname`, `tel` ,`email`, `type`,`date`) ";
+    $StrSQL = "INSERT INTO user (`username`, `password`, `firstname`, `lastname`, `tel` ,`email`, `type`, `status`,`date`) ";
     $StrSQL .= "VALUES (";
     $StrSQL .= "'".$_POST["userusername"]."','".$password."','".$_POST["userfirstname"]."','".$_POST["userlastname"]."','".$_POST["usertel"]."' ";
-    $StrSQL .= ",'".$_POST["useremail"]."','".$_POST["usertype"]."','".date("Y-m-d H:i:s")."' ";
+    $StrSQL .= ",'".$_POST["useremail"]."','".$_POST["usertype"]."','Y','".date("Y-m-d H:i:s")."' ";
     $StrSQL .= ")";
     $query = mysqli_query($conn,$StrSQL);
     

@@ -1,12 +1,13 @@
 <?php
     session_start();
     if (!isset($_SESSION['loggedin'])) {
-        header('Location: ../');
+        header('Location: ../../');
         exit;
     }    
-    include_once('conn.php');
+    include_once('../conn.php');
 ?>
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -15,9 +16,10 @@
     <title>เคสลูกค้า (Customer)</title>
 
     <?php 
-    include_once('import_css.php');
     include_once('css.php'); 
+    include_once('../config.php');
     include_once ROOT .'/func.php';
+    include_once ROOT .'/import_css.php';    
     ?>
 </head>
 
@@ -36,82 +38,64 @@
 
 
         <div class="content-wrapper">
-            
+
             <div class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Dashboard</h1>
+                            <h1 class="m-0">เคสลูกค้า (Customer)</h1>
                         </div>
                         <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Dashboard v1</li>
-                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
+
             <section class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg-3 col-6">
-                            <div class="small-box bg-info">
-                                <div class="inner">
-                                    <h3>150</h3>
-
-                                    <p>New Orders</p>
+                        <div class="col-lg-12 col-12">
+                            <form data-ajax="false" target="_blank" method="post">
+                                <div data-role="fieldcontain">
+                                    <div class="btn-group" id="btnAddSO" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#modal_add"><i class="fa fa fa-tags" aria-hidden="true"></i>
+                                            เพิ่มลูกค้า</button>
+                                        <button type="button" id="btnRefresh" class="btn btn-primary"><i
+                                                class="fas fa-sync-alt" aria-hidden="true"></i> Refresh</button>
+                                    </div>
+                                    <div class="btn-group" id="btnBack" style="display:none;" role="group"
+                                        aria-label="Basic example">
+                                        <button type="button" class="btn btn-success"><i class="fa fa fa-tags"
+                                                aria-hidden="true"></i>
+                                            ย้อนกลับ</button>
+                                    </div>
                                 </div>
-                                <div class="icon">
-                                    <i class="ion ion-bag"></i>
-                                </div>
-                                <a href="#" class="small-box-footer">More info <i
-                                        class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <div class="small-box bg-success">
-                                <div class="inner">
-                                    <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                                    <p>Bounce Rate</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-stats-bars"></i>
-                                </div>
-                                <a href="#" class="small-box-footer">More info <i
-                                        class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <div class="small-box bg-warning">
-                                <div class="inner">
-                                    <h3>44</h3>
-
-                                    <p>User Registrations</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-person-add"></i>
-                                </div>
-                                <a href="#" class="small-box-footer">More info <i
-                                        class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <div class="small-box bg-danger">
-                                <div class="inner">
-                                    <h3>65</h3>
-
-                                    <p>Unique Visitors</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-pie-graph"></i>
-                                </div>
-                                <a href="#" class="small-box-footer">More info <i
-                                        class="fas fa-arrow-circle-right"></i></a>
-                            </div>
+                            </form>
                         </div>
                     </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-12 col-12">
+                            <table name="tableCustomer" id="tableCustomer" class="table table-bordered table-striped">
+                                <thead style=" background-color:#D6EAF8;">
+                                    <tr>
+                                        <th width="10%">วันที่</th>
+                                        <th width="40%">ชื่อลูกค้า</th>
+                                        <th width="20%" style="text-align:center">สถานะ</th>
+                                        <th width="15%">Code</th>
+                                        <th width="15%">เลข Code</th>
+                                        
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
                 </div>
             </section>
         </div>

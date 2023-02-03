@@ -46,7 +46,7 @@
         color: #5b6574;
         font-size: 26px;
         padding: 15px 0 10px 0;
-        border-bottom: 1px solid #dee0e4;
+        border-bottom: 1px solid #e6551a;
     }
 
     .login form {
@@ -62,7 +62,7 @@
         align-items: center;
         width: 50px;
         height: 50px;
-        /* background-color: #e6001a; */
+        background-color: #e6551a;
         color: #ffffff;
     }
 
@@ -79,7 +79,7 @@
         width: 100%;
         padding: 15px;
         margin-top: 20px;
-        background-color: #e6001a;
+        background-color: #e6551a;
         border: 0;
         cursor: pointer;
         font-weight: bold;
@@ -88,7 +88,7 @@
     }
 
     .login form input[type="submit"]:hover {
-        background-color: #e6551a;
+        background-color: #e65455;
         transition: background-color 0.2s;
     }
 
@@ -193,7 +193,7 @@
             <div class="modal-css">
                 <div class="login">
 
-                    <!-- <h1> <img src="img/logo.jpg" width="90px;"></h1> -->
+                    <h1> <img src="img/logo.png" width="90px;"></h1>
                     <form action="login_result.php" method="post">
                         <label for="username">
                             <i class="fas fa-user"></i>

@@ -1,6 +1,6 @@
 <?php
 	header('Content-Type: application/json');
-	include('../conn.php');
+	include('../../conn.php');
 
 	$sql = "SELECT cuscode,cusname,lastname,titlename,cusdate,code,codeno,followdate,trackno ";
 	$sql .= "FROM customer  ";   

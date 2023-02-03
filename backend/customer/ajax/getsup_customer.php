@@ -1,6 +1,6 @@
 <?php
 	header('Content-Type: application/json');
-	include('../conn.php');
+	include('../../conn.php');
 	
 	$strSQL = "SELECT cuscode,cusname,lastname,titlename,cusdate,code,codeno ";
 	$strSQL .= ",plateno,credittype,oldfinance,closeprice,closevender,diff";

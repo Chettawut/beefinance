@@ -34,11 +34,9 @@
                         <div class="col-md-6">
                             <label class="col-form-label">ประเภท</label>
                             <select class="form-control" name="edittype" id="edittype">
-                                <option value="01">Store</option>
-                                <option value="02">Sales Leader</option>
-                                <option value="03">Accounting</option>
-                                <option value="04">Manager</option>
-                                <option value="05">Sales</option>
+                                <option value="01">ธุรการ</option>
+                                <option value="02">Messenger</option>
+                                <option value="03">บัญชี</option>
                                 <option value="99">Admin</option>
                             </select>
                         </div>

@@ -12,7 +12,7 @@
     </title>
 
     <?php include_once('css.php'); ?>
-
+    <link rel="icon" href="img/logo_main.jpg">
     <style>
     * {
         box-sizing: border-box;

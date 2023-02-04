@@ -80,11 +80,16 @@
                             <table name="tableCustomer" id="tableCustomer" class="table table-bordered table-striped">
                                 <thead style=" background-color:#D6EAF8;">
                                     <tr>
-                                        <th width="10%">วันที่</th>
-                                        <th width="40%">ชื่อลูกค้า</th>
-                                        <th width="20%" style="text-align:center">สถานะ</th>
-                                        <th width="15%">Code</th>
-                                        <th width="15%">เลข Code</th>
+                                    
+                                        
+                                        <th width="12.5%">ชื่อลูกค้า</th>
+                                        <th width="12.5%" style="text-align:center">สถานะ</th>
+                                        <th width="12.5%">ทะเบียนรถ</th>
+                                        <th width="12.5%">วันที่</th>
+                                        <th width="12.5%">Code Ref</th>
+                                        <th width="12.5%">เลข Chaiyo</th>
+                                        <th width="12.5%">ชื่อสาขา</th>
+                                        <th width="12.5%">ไฟแนนต์เดิม</th>
                                         
 
                                     </tr>

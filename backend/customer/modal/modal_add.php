@@ -17,11 +17,11 @@
                             <input type="date" class="form-control" name="add_cusdate" id="add_cusdate" required>
                         </div>
                         <div class="col-md-4">
-                            <label class="col-form-label">Code </label>
+                            <label class="col-form-label">Code Ref </label>
                             <input type="text" class="form-control" name="add_code" id="add_code" required>
                         </div>
                         <div class="col-md-4">
-                            <label class="col-form-label">เลข Code </label>
+                            <label class="col-form-label">เลข Chaiyo </label>
                             <input type="text" class="form-control" name="add_codeno" id="add_codeno" value="">
                         </div>
                     </div>

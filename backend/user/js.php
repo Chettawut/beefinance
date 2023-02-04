@@ -10,15 +10,11 @@ $(function() {
             for (count = 0; count < result.username.length; count++) {
 
                 if(result.type[count]=='01')
-                type = 'Store'
+                type = 'ธุรการ'
                 if(result.type[count]=='02')
-                type = 'Sales Leader'
+                type = 'Messenger'
                 if(result.type[count]=='03')
-                type = 'Accounting'
-                if(result.type[count]=='04')
-                type = 'Manager'
-                if(result.type[count]=='05')
-                type = 'Sales'
+                type = 'บัญชี'
                 if(result.type[count]=='99')
                 type = 'Admin'
 

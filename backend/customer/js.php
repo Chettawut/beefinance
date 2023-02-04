@@ -17,7 +17,7 @@ $(function() {
                 if (result.trackno[count] != '')
                     status = 'เสร็จสิ้น'
                 else if (result.followdate[count] != '')
-                    status = 'ยื่นตามเอกสารตัวจริงแล้ว'
+                    status = 'ยื่นเอกสารชุดโอนแล้ว'
                 else 
                     status = 'ปิดบัญชีเสร็จสิ้น'
 
@@ -25,9 +25,10 @@ $(function() {
                     '<tr data-toggle="modal" data-target="#modal_edit" id="' + result
                     .cuscode[
                         count] + '" data-whatever="' + result.cuscode[
-                        count] + '"><td>' + convertDateTH(result.cusdate[count]) + '</td><td>' + result
+                        count] + '"><td>' + result
                     .titlename[count] + ' ' + result.cusname[count] + ' ' + result.lastname[
-                        count] + '</td><td  style="text-align:center">' + status + '</td><td>' + result.code[count] + '</td><td>' + result.codeno[
+                        count] + '</td><td  style="text-align:center">' + status + '</td><td>' + result.plateno[count] + '</td><td>' + convertDateTH(result.cusdate[count]) + '</td><td>' + result.code[count] + '</td><td>' + result.codeno[count] + '</td><td>' + result.branch[
+                        count] + '</td><td>' + result.oldfinance[
                         count] + '</td></tr>');
             }
 
@@ -36,7 +37,7 @@ $(function() {
                 "lengthChange": false,
                 "searching": true,
                 "ordering": true,
-                order: [[ 2, 'asc' ]],
+                order: [[ 1, 'asc' ]],
                 "info": false,
                 "autoWidth": false,
                 "responsive": true,

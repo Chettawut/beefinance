@@ -10,7 +10,7 @@
     $strSQL .= ",codeno='".$_POST["codeno"]."',plateno='".$_POST["plateno"]."',credittype='".$_POST["credittype"]."' ";
     $strSQL .= ",oldfinance='".$_POST["oldfinance"]."',closeprice='".$_POST["closeprice"]."',closevender='".$_POST["closevender"]."' ";
     $strSQL .= ",diff='".$_POST["diff"]."',branch='".$_POST["branch"]."',province='".$_POST["province"]."' ";
-    $strSQL .= ",followdate='".$_POST["followdate"]."',trackno='".$_POST["trackno"]."' ";
+    $strSQL .= ",followdate='".$_POST["followdate"]."',bookdate='".$_POST["bookdate"]."',trackno='".$_POST["trackno"]."' ";
     $strSQL .= ",s_date = '".date("Y-m-d")."',s_time='".date("H:i:s")."' ";
     $strSQL .= "WHERE cuscode= '".$_POST["cuscode"]."' ";
     

@@ -13,21 +13,35 @@ $(function() {
 
             for (count = 0; count < result.cuscode.length; count++) {
 
-                let status
+                let status,color
                 if (result.trackno[count] != '')
+                {
                     status = 'เสร็จสิ้น'
+                    color = '<span class="badge bg-danger">'+status+'</span>'
+                }
+                else if (result.bookdate[count] != '')
+                {
+                    status = 'รับเล่มแล้ว'
+                    color = '<span class="badge bg-warning">'+status+'</span>'
+                }
                 else if (result.followdate[count] != '')
-                    status = 'ยื่นเอกสารชุดโอนแล้ว'
+                {
+                    status = 'ยื่นเอกสาร<br><br>ชุดโอนแล้ว'
+                    color = '<span class="badge bg-primary">'+status+'</span>'
+                }
                 else 
-                    status = 'ปิดบัญชีเสร็จสิ้น'
-
+                {
+                    status = 'ปิดบัญชี<br><br>เสร็จสิ้น'
+                    color = '<span class="badge bg-success">'+status+'</span>'
+                }
+                    // badge bg-danger
                 $('#tableCustomer').append(
                     '<tr data-toggle="modal" data-target="#modal_edit" id="' + result
                     .cuscode[
                         count] + '" data-whatever="' + result.cuscode[
                         count] + '"><td>' + result
                     .titlename[count] + ' ' + result.cusname[count] + ' ' + result.lastname[
-                        count] + '</td><td  style="text-align:center">' + status + '</td><td>' + result.plateno[count] + '</td><td>' + convertDateTH(result.cusdate[count]) + '</td><td>' + result.code[count] + '</td><td>' + result.codeno[count] + '</td><td>' + result.branch[
+                        count] + '</td><td  style="text-align:center">' + color + '</td><td>' + result.plateno[count] + '</td><td>' + convertDateTH(result.cusdate[count]) + '</td><td>' + result.code[count] + '</td><td>' + result.codeno[count] + '</td><td>' + result.branch[
                         count] + '</td><td>' + result.oldfinance[
                         count] + '</td></tr>');
             }
@@ -83,15 +97,12 @@ $('#modal_edit').on('show.bs.modal', function(event) {
             modal.find('.modal-body #branch').val(result.branch);
             modal.find('.modal-body #province').val(result.province);
             modal.find('.modal-body #followdate').val(result.followdate);
+            modal.find('.modal-body #bookdate').val(result.bookdate);
             modal.find('.modal-body #trackno').val(result.trackno);
 
 
         }
     });
-});
-
-$('#modelEdit').on('hidden.bs.modal', function() {
-    $("#frmEditInventory *").prop('disabled', true);
 });
 
 $("#btnRefresh").click(function() {

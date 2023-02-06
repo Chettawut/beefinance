@@ -2,7 +2,7 @@
 	header('Content-Type: application/json');
 	include('../../conn.php');
 
-	$sql = "SELECT cuscode,cusname,lastname,titlename,plateno,cusdate,code,codeno,branch,oldfinance,followdate,trackno,credittype ";
+	$sql = "SELECT cuscode,cusname,lastname,titlename,plateno,cusdate,code,codeno,branch,oldfinance,followdate,bookdate,trackno,credittype ";
 	$sql .= "FROM customer  ";   
 
 	$query = mysqli_query($conn,$sql);
@@ -20,7 +20,8 @@
 		"codeno" => array(),
 		"branch" => array(),	
 		"oldfinance" => array(),		
-		"followdate" => array(),		
+		"followdate" => array(),	
+		"bookdate" => array(),		
 		"trackno" => array(),		
 		"credittype" => array()
 		
@@ -38,6 +39,7 @@
 			array_push($json_result['branch'],$row["branch"]);
 			array_push($json_result['oldfinance'],$row["oldfinance"]);
 			array_push($json_result['followdate'],$row["followdate"]);
+			array_push($json_result['bookdate'],$row["bookdate"]);
 			array_push($json_result['trackno'],$row["trackno"]);
 			array_push($json_result['credittype'],$row["credittype"]);
         }

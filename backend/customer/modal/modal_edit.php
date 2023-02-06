@@ -100,12 +100,15 @@
                             <label for="recipient-name" class="col-form-label">วันที่ยื่นตามเอกสารตัวจริง</label>
                             <input type="date" class="form-control" name="followdate" id="followdate">
                         </div>
-
+                        <div class="col-md-4">
+                            <label for="recipient-name" class="col-form-label">วันที่รับเล่ม</label>
+                            <input type="date" class="form-control" name="bookdate" id="bookdate">
+                        </div>
                         <div class="col-md-4">
                             <label for="recipient-name" class="col-form-label">เลขที่ Tracking</label>
                             <input type="text" class="form-control" name="trackno" id="trackno">
                         </div>
-
+                        
 
                     </div>
                     <input type="hidden" id="cuscode" name="cuscode">

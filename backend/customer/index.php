@@ -78,18 +78,18 @@
                     <div class="row">
                         <div class="col-lg-12 col-12">
                             <table name="tableCustomer" id="tableCustomer" class="table table-bordered table-striped">
-                                <thead style=" background-color:#D6EAF8;">
+                                <thead style="background-color:#D6EAF8;">
                                     <tr>
                                     
                                         
-                                        <th width="12.5%">ชื่อลูกค้า</th>
-                                        <th width="12.5%" style="text-align:center">สถานะ</th>
-                                        <th width="12.5%">ทะเบียนรถ</th>
-                                        <th width="12.5%">วันที่</th>
-                                        <th width="12.5%">Code Ref</th>
-                                        <th width="12.5%">เลข Chaiyo</th>
-                                        <th width="12.5%">ชื่อสาขา</th>
-                                        <th width="12.5%">ไฟแนนต์เดิม</th>
+                                        <th >ชื่อลูกค้า</th>
+                                        <th >สถานะ</th>
+                                        <th>ทะเบียนรถ</th>
+                                        <th >วันที่</th>
+                                        <th >Code Ref</th>
+                                        <th >เลข Chaiyo</th>
+                                        <th >ชื่อสาขา</th>
+                                        <th >ไฟแนนต์เดิม</th>
                                         
 
                                     </tr>

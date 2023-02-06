@@ -4,7 +4,7 @@
 	
 	$strSQL = "SELECT cuscode,cusname,lastname,titlename,cusdate,code,codeno ";
 	$strSQL .= ",plateno,credittype,oldfinance,closeprice,closevender,diff";
-	$strSQL .= ",branch,province,followdate,trackno ";
+	$strSQL .= ",branch,province,followdate,bookdate,trackno ";
 	$strSQL .= "FROM customer where cuscode = '".$_POST['idcode']."' ";   
 
 	$query = mysqli_query($conn,$strSQL);
@@ -26,6 +26,7 @@
 		"branch" => array(),	
 		"province" => array(),
 		"followdate" => array(),		
+		"bookdate" => array(),		
 		"trackno" => array()
 		
 		);
@@ -47,6 +48,7 @@
 			array_push($json_result['branch'],$row["branch"]);
 			array_push($json_result['province'],$row["province"]);
 			array_push($json_result['followdate'],$row["followdate"]);
+			array_push($json_result['bookdate'],$row["bookdate"]);
 			array_push($json_result['trackno'],$row["trackno"]);			
         }
         echo json_encode($json_result);

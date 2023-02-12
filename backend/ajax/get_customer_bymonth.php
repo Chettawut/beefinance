@@ -2,8 +2,12 @@
 	header('Content-Type: application/json');
 	include('../conn.php');
 
+	$month = date('m');
+	$year = date('Y');
 	$sql = "SELECT count(cuscode) as countcus ";
 	$sql .= "FROM customer  ";   
+	$sql .= "where MONTH(cusdate)= '".$month."' and YEAR(cusdate) = '".$year."' ";   
+	
 
 	$query = mysqli_query($conn,$sql);
 

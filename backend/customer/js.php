@@ -2,10 +2,15 @@
 $(function() {
 
 
-    
+
     $("#add_cusdate").val(new Date().toISOString().substring(0, 10));
+
     
-    $.ajax({
+
+
+})
+
+$.ajax({
         type: "POST",
         url: "ajax/get_customer.php",
         //    data: $("#frmMain").serialize(),
@@ -13,35 +18,31 @@ $(function() {
 
             for (count = 0; count < result.cuscode.length; count++) {
 
-                let status,color
-                if (result.trackno[count] != '')
-                {
+                let status, color
+                if (result.trackno[count] != '') {
                     status = 'เสร็จสิ้น'
-                    color = '<span class="badge bg-danger">'+status+'</span>'
-                }
-                else if (result.bookdate[count] != '')
-                {
+                    color = '<span class="badge bg-danger">' + status + '</span>'
+                } else if (result.bookdate[count] != '') {
                     status = 'รับเล่มแล้ว'
-                    color = '<span class="badge bg-warning">'+status+'</span>'
-                }
-                else if (result.followdate[count] != '')
-                {
+                    color = '<span class="badge bg-warning">' + status + '</span>'
+                } else if (result.followdate[count] != '') {
                     status = 'ยื่นเอกสาร<br><br>ชุดโอนแล้ว'
-                    color = '<span class="badge bg-primary">'+status+'</span>'
-                }
-                else 
-                {
+                    color = '<span class="badge bg-primary">' + status + '</span>'
+                } else {
                     status = 'ปิดบัญชี<br><br>เสร็จสิ้น'
-                    color = '<span class="badge bg-success">'+status+'</span>'
+                    color = '<span class="badge bg-success">' + status + '</span>'
                 }
-                    // badge bg-danger
+                // badge bg-danger
                 $('#tableCustomer').append(
                     '<tr data-toggle="modal" data-target="#modal_edit" id="' + result
                     .cuscode[
                         count] + '" data-whatever="' + result.cuscode[
                         count] + '"><td>' + result
                     .titlename[count] + ' ' + result.cusname[count] + ' ' + result.lastname[
-                        count] + '</td><td  style="text-align:center">' + color + '</td><td>' + result.plateno[count] + '</td><td>' + convertDateTH(result.cusdate[count]) + '</td><td>' + result.code[count] + '</td><td>' + result.codeno[count] + '</td><td>' + result.branch[
+                        count] + '</td><td  style="text-align:center">' + color + '</td><td>' +
+                    result.plateno[count] + '</td><td>' + convertDateTH(result.cusdate[count]) +
+                    '</td><td>' + result.code[count] + '</td><td>' + result.codeno[count] +
+                    '</td><td>' + result.branch[
                         count] + '</td><td>' + result.oldfinance[
                         count] + '</td></tr>');
             }
@@ -51,7 +52,9 @@ $(function() {
                 "lengthChange": false,
                 "searching": true,
                 "ordering": true,
-                order: [[ 1, 'asc' ]],
+                order: [
+                    [1, 'asc']
+                ],
                 "info": false,
                 "autoWidth": false,
                 "responsive": true,
@@ -68,7 +71,31 @@ $(function() {
     });
 
 
-})
+$('#add_closeprice').on('change', function() {
+    Caldiff()
+});
+
+$('#add_closevender').on('change', function() {
+
+    Caldiff()
+});
+
+$('#closeprice').on('change', function() {
+    Caldiff()
+});
+
+$('#closevender').on('change', function() {
+
+    Caldiff()
+});
+
+
+function Caldiff() {
+    let data = $('#add_closeprice').val() - $('#add_closevender').val()
+    $('#add_diff').val(parseFloat(Math.abs(Number(data) || 0).toFixed(2)).toString())
+    let data2 = $('#closeprice').val() - $('#closevender').val()
+    $('#diff').val(parseFloat(Math.abs(Number(data2) || 0).toFixed(2)).toString())
+}
 
 
 $('#modal_edit').on('show.bs.modal', function(event) {
@@ -112,6 +139,10 @@ $("#btnRefresh").click(function() {
 //เพิ่มผู้ขาย
 $("#frmAddCustomer").submit(function(e) {
     e.preventDefault();
+    $(':disabled').each(function(event) {
+        $(this).removeAttr('disabled');
+    });
+
     $.ajax({
         type: "POST",
         url: "ajax/add_customer.php",

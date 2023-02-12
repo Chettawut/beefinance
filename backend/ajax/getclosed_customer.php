@@ -4,7 +4,7 @@
 
 	$sql = "SELECT count(cuscode) as countcus ";
 	$sql .= "FROM customer  ";   
-	$sql .= "where followdate != '' and trackno != ''  ";   
+	$sql .= "where trackno != ''  ";   
 
 	$query = mysqli_query($conn,$sql);
 

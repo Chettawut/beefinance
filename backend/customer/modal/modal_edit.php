@@ -68,15 +68,15 @@
                     <div class="form-row">
                         <div class="col-md-4">
                             <label class="col-form-label">ยอดปิดบัญชี </label>
-                            <input type="text" class="form-control" name="closeprice" id="closeprice" value="">
+                            <input type="number" class="form-control" name="closeprice" id="closeprice" step="0.01" >
                         </div>
                         <div class="col-md-4">
                             <label class="col-form-label">ยอดปิดจาก Vender </label>
-                            <input type="text" class="form-control" name="closevender" id="closevender" value="">
+                            <input type="number" class="form-control" name="closevender" id="closevender" step="0.01" >
                         </div>
                         <div class="col-md-4">
                             <label class="col-form-label">ส่วนต่าง </label>
-                            <input type="text" class="form-control" name="diff" id="diff" value="">
+                            <input type="number" class="form-control" name="diff" id="diff" disabled>
                         </div>
                     </div>
 

@@ -109,13 +109,33 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-12">
+                            <h4 style="text-align:center;">รายชื่อลูกค้าที่ส่งเล่มทะเบียนแล้ว</h4>
+                            <table name="tableCustomer" id="tableCustomer" class="table table-bordered table-striped">
+                                <thead style="background-color:#D6EAF8;">
+                                    <tr>
+                                        <th >ชื่อลูกค้า</th>
+                                        <th >สถานะ</th>
+                                        <th>ทะเบียนรถ</th>
+                                        <th >วันที่</th>
+                                        <th >Code Ref</th>
+                                        <th >เลข Chaiyo</th>
+                                        <th >ชื่อสาขา</th>
+                                        <th >ไฟแนนต์เดิม</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
 
-
-        <?php include_once('modal/modal_add.php');?>
-        <?php include_once('modal/modal_edit.php');?>
+        <?php include_once('customer/modal/modal_edit.php');?>
 
     </div>
 

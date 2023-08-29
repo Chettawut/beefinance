@@ -3,10 +3,12 @@
 	include('../../conn.php');
     
     date_default_timezone_set("Asia/Bangkok");
-    
-    
-    $strSQL = "DELETE FROM user ";    
-    $strSQL .= "WHERE username= '".$_POST["editusername"]."' ";
+
+    $password = password_hash($_POST['editpassword'], PASSWORD_DEFAULT);
+
+    $strSQL = "UPDATE user SET ";
+    $strSQL .= "password='".$password."' ";    
+    $strSQL .= "WHERE id ='".$_POST["perresetcode"]."' ";
 
     
 	$query = mysqli_query($conn,$strSQL);
@@ -15,7 +17,7 @@
 
 
         if($query) {
-            echo json_encode(array('status' => '1','message'=> 'ลบผู้ใช่ '.$_POST["editfirstname"].' สำเร็จ'));
+            echo json_encode(array('status' => '1','message'=> 'รีเซ็ต Password สำเร็จ'));
         }
         else
         {

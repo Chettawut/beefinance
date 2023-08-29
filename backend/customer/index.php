@@ -57,19 +57,15 @@
                         <div class="col-lg-12 col-12">
                             <form data-ajax="false" target="_blank" method="post">
                                 <div data-role="fieldcontain">
-                                    <div class="btn-group" id="btnAddSO" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-success" data-toggle="modal"
-                                            data-target="#modal_add"><i class="fa fa fa-tags" aria-hidden="true"></i>
-                                            เพิ่มลูกค้า</button>
-                                        <button type="button" id="btnRefresh" class="btn btn-primary"><i
-                                                class="fas fa-sync-alt" aria-hidden="true"></i> Refresh</button>
-                                    </div>
-                                    <div class="btn-group" id="btnBack" style="display:none;" role="group"
-                                        aria-label="Basic example">
-                                        <button type="button" class="btn btn-success"><i class="fa fa fa-tags"
-                                                aria-hidden="true"></i>
-                                            ย้อนกลับ</button>
-                                    </div>
+
+                                    <button id="btnAddSO" type="button" class="btn"
+                                        style="color:white;background :  #2874A6; font-size:20px;text-shadow:2px 2px 4px #000000;"
+                                        data-toggle="modal" data-target="#modal_add"><i class="	fas fa-user-plus"
+                                            aria-hidden="true"></i>
+                                        เพิ่มลูกค้า</button>
+                                    <button type="button" id="btnRefresh" class="btn"
+                                        style="color:white;background : #148F77; font-size:20px;text-shadow:2px 2px 4px #000000;"><i
+                                            class="fas fa-sync-alt" aria-hidden="true"></i> Refresh</button>
                                 </div>
                             </form>
                         </div>
@@ -80,17 +76,17 @@
                             <table name="tableCustomer" id="tableCustomer" class="table table-bordered table-striped">
                                 <thead style="background-color:#D6EAF8;">
                                     <tr>
-                                    
-                                        
-                                        <th >ชื่อลูกค้า</th>
-                                        <th >สถานะ</th>
+
+
+                                        <th>ชื่อลูกค้า</th>
+                                        <th>สถานะ</th>
                                         <th>ทะเบียนรถ</th>
-                                        <th >วันที่</th>
-                                        <th >Code Ref</th>
-                                        <th >เลข Chaiyo</th>
-                                        <th >ชื่อสาขา</th>
-                                        <th >ไฟแนนต์เดิม</th>
-                                        
+                                        <th>วันที่</th>
+                                        <th>Code Ref</th>
+                                        <th>เลข Chaiyo</th>
+                                        <th>ชื่อสาขา</th>
+                                        <th>ไฟแนนต์เดิม</th>
+
 
                                     </tr>
                                 </thead>

@@ -1,21 +1,13 @@
-
 <style>
-  /* table[name=tableUser]  {
-    border-top: 1px solid #00BFFF;
-    
+    .table-bordered thead td, .table-bordered thead th {
+    border-bottom-width: 2px;
+    white-space: nowrap;
 }
-
-table[name=tableUser] th {
-    font-size: 16px;
-    color: #fff;
-    line-height: 1.4;
-    background-color: #3C8DBB;
-    border: 3px solid black;
+.m-0{
+    font-size: clamp(25px, 2.5vw, 30px);
+    font-weight: bold;
 }
-
-
-table[name=tableUser] tr:hover {
-    background-color: #DCDCDC;
-} */
-
+#btnUSER,#btnRefresh{
+    border: solid 3px #2E4053;
+}
 </style>

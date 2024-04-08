@@ -2,10 +2,6 @@
 $(function() {
 
 
-
-
-})
-
 $.ajax({
     type: "POST",
     url: "ajax/get_customer_bymonth.php",
@@ -169,4 +165,6 @@ $.ajax({
     }
 
 });
+
+})
 </script>
